@@ -23,18 +23,20 @@ if [ -f $sysmodmap ]; then
     xmodmap $sysmodmap
 fi
 
-if [ -f "$userresources" ]; then
-
-
-
-
-
-
-
-    xrdb -merge "$userresources"
-
-fi
-
+#if [ -f "$userresources" ]; then
+#
+#
+#
+#
+#
+#
+#
+#    xrdb -merge "$userresources"
+#
+#fi
+[ -f ~/.Xresources ] && xrdb -merge ~/.Xresources
+eval $(/usr/bin/gnome-keyring-daemon --start --components=pkcs11,secrets,ssh)
+export SSH_AUTH_SOCK
 if [ -f "$usermodmap" ]; then
     xmodmap "$usermodmap"
 fi
@@ -53,8 +55,8 @@ fi
 #xterm -geometry 80x50+494+51 &
 #xterm -geometry 80x20+494-0 &
 #exec xterm -geometry 80x66+0+0 -name login
-export XMODIFIERS="@im=fcitx"
-export QT_IM_MODULE=fcitx
-export GTK_IM_MODULE=fcitx
-fcitx&
-exec i3
+#export XMODIFIERS="@im=fcitx"
+#export QT_IM_MODULE=fcitx
+#export GTK_IM_MODULE=fcitx
+#fcitx&
+exec i3 
