@@ -64,15 +64,15 @@ export QT_IM_MODULE=fcitx
 export XMODIFIERS=@im=fcitx
 fcitx&
 #ch_moni
-#exec i3 
-#ch_moni
+exec i3 
+ch_moni
 #启用gnome的主题
-gnome-settings-daemon &    
+#gnome-settings-daemon &    
 #电源管理程序
-gnome-power-manager &      
+#gnome-power-manager &      
 #网络管理程序
-nm-applet --sm-disable &                           
+#nm-applet --sm-disable &                           
 #自动更新程序
-update-notifier &
+#update-notifier &
 
-exec awesome
+#exec awesome
