@@ -6,8 +6,8 @@ if [ $UID -eq 0 ]; then NCOLOR="red"; else NCOLOR="green"; fi
 local return_code="%(?..%{$fg[red]%}%? ↵%{$reset_color%})"
 
 # primary prompt
-PROMPT='$FG[237]  $(date +%H:%M:%S)  $(pwd)                       %{$reset_color%}
-$FG[032]%a  \
+PROMPT='$FG[237]--------------  $(date +%H:%M:%S)----------  $(pwd)-------------------- %{$reset_color%}
+$FG[032]%a $(randomemoji) \
 $(git_prompt_info) \
 $FG[105]%(!.#.»)%{$reset_color%} '
 PROMPT2='%{$fg[red]%}\ %{$reset_color%}'

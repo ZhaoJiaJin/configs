@@ -1,0 +1,11 @@
+#!/bin/bash
+
+emojis=(                          )
+
+len=${#emojis[@]}
+
+ts=`date +%S`
+
+pos=$((ts % len))
+
+echo -n ${emojis[$pos]}
