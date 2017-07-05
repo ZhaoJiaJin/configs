@@ -4,8 +4,9 @@ emojis=(                  
 
 len=${#emojis[@]}
 
-ts=`date +%S`
+len=$((len - 1))
+#ts=`date +%S`
 
-pos=$((ts % len))
-
+#pos=$((ts % len))
+pos=`shuf -i 0-$len -n 1`
 echo -n ${emojis[$pos]}
